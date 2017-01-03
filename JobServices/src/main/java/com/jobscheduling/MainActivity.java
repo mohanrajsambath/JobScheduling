@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private void construct_Job(){
          JobInfo.Builder builer = new JobInfo.Builder(JOB_ID,new ComponentName(this,MyServices.class));
         builer.setPeriodic(2000)
-                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
+        .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
         .setPersisted(true);
         mJobScheduler.schedule(builer.build());
     }

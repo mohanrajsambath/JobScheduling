@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JobScheduling.iml" filepath="$PROJECT_DIR$/JobScheduling.iml" />
       <module fileurl="file://$PROJECT_DIR$/JobServices/JobServices.iml" filepath="$PROJECT_DIR$/JobServices/JobServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pgrsasynloader/pgrsasynloader.iml" filepath="$PROJECT_DIR$/pgrsasynloader/pgrsasynloader.iml" />
     </modules>
   </component>
 </project>
