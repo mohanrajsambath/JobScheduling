@@ -3,6 +3,7 @@ package com.simpleloader;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
@@ -61,7 +62,8 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
 
                     if (scrollY == (v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight())) {
                         Log.i(TAG, "BOTTOM SCROLL");
-                        configRetartApi();
+                        delayRestartApi();
+
                     }
                 }
             });
@@ -74,11 +76,19 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
         //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
     }
 
-    private void configRetartApi() {
+    private void delayRestartApi(){
         tvJsonResult.setText("Loading Again....");
-        //getSupportLoaderManager().initLoader(0, null, this).forceLoad();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                configRetartApi();
+            }
+        }, 200000);
+    }
+
+    private void configRetartApi() {
         getSupportLoaderManager().restartLoader(0, null, this).forceLoad();
-        //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
     }
 
 

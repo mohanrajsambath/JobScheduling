@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/JobServices" />
+            <option value="$PROJECT_DIR$/customloader" />
             <option value="$PROJECT_DIR$/simploader" />
           </set>
         </option>
