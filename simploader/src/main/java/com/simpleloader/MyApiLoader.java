@@ -38,7 +38,7 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
         tvJsonResult = (TextView) findViewById(R.id.tv_json_result);
         nested_scrl_home = (NestedScrollView) findViewById(R.id.nested_scrl_home);
         //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
-        configApi();
+        configIntialApi();
         if (nested_scrl_home != null) {
 
             nested_scrl_home.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
@@ -56,12 +56,12 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
 
                     if (scrollY == 0) {
                         Log.i(TAG, "TOP SCROLL");
-                        configApi();
+                        configRetartApi();
                     }
 
                     if (scrollY == (v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight())) {
                         Log.i(TAG, "BOTTOM SCROLL");
-                        configApi();
+                        configRetartApi();
                     }
                 }
             });
@@ -69,10 +69,18 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
 
     }
 
-    private void configApi() {
+    private void configIntialApi() {
         getSupportLoaderManager().initLoader(0, null, this).forceLoad();
         //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
     }
+
+    private void configRetartApi() {
+        tvJsonResult.setText("Loading Again....");
+        //getSupportLoaderManager().initLoader(0, null, this).forceLoad();
+        getSupportLoaderManager().restartLoader(0, null, this).forceLoad();
+        //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
+    }
+
 
     @Override
     public Loader<String> onCreateLoader(int id, Bundle args) {
@@ -89,7 +97,7 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
 
     @Override
     public void onLoaderReset(Loader<String> loader) {
-        tvJsonResult.setText("");
+
 
     }
 
