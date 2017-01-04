@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JobScheduling.iml" filepath="$PROJECT_DIR$/JobScheduling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JobScheduling.iml" filepath="$PROJECT_DIR$/JobScheduling.iml" />
       <module fileurl="file://$PROJECT_DIR$/JobServices/JobServices.iml" filepath="$PROJECT_DIR$/JobServices/JobServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JobServices/JobServices.iml" filepath="$PROJECT_DIR$/JobServices/JobServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customasyncloader/customasyncloader.iml" filepath="$PROJECT_DIR$/customasyncloader/customasyncloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simploader/simploader.iml" filepath="$PROJECT_DIR$/simploader/simploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/simploader/simploader.iml" filepath="$PROJECT_DIR$/simploader/simploader.iml" />
     </modules>
   </component>
