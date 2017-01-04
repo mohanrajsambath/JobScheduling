@@ -1,4 +1,4 @@
-package com.proasynclodr;
+package com.simpleloader;
 
 import android.content.Context;
 import android.os.Build;
@@ -7,11 +7,12 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.simpleloader.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,7 +27,8 @@ import java.net.URL;
 
 public class MyApiLoader extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
     TextView tvJsonResult;
-    ScrollView scrl_json;
+    NestedScrollView nested_scrl_home;
+    private String TAG = MyApiLoader.class.getName();
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -34,45 +36,42 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myloader);
         tvJsonResult = (TextView) findViewById(R.id.tv_json_result);
-        scrl_json = (ScrollView) findViewById(R.id.scrl_json);
-        getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
+        nested_scrl_home = (NestedScrollView) findViewById(R.id.nested_scrl_home);
+        //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
+        configApi();
+        if (nested_scrl_home != null) {
 
-        if (scrl_json != null) {
-
-            /*scrl_json.setOnScrollChangeListener(new ScrollView.OnScrollChangeListener() {
+            nested_scrl_home.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
                 @Override
-                public void onScrollChange(ScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+
+                    if (scrollY > oldScrollY) {
+                        Log.i(TAG, "Scroll DOWN");
+                        //configApi();
+                    }
+                    if (scrollY < oldScrollY) {
+                        Log.i(TAG, "Scroll UP");
+                        //configApi();
+                    }
 
                     if (scrollY == 0) {
-
+                        Log.i(TAG, "TOP SCROLL");
+                        configApi();
                     }
 
                     if (scrollY == (v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight())) {
                         Log.i(TAG, "BOTTOM SCROLL");
-
-
-
+                        configApi();
                     }
                 }
-            });*/
-
-            /*scrl_json.setOnScrollChangeListener(new ScrollView.OnScrollChangeListener() {
-                @Override
-                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                    if (scrollY == 0) {
-
-                    }
-
-                    if (scrollY == (v.getChildAt(0).getMeasuredHeight() - v.getMeasuredHeight())) {
-                        Log.i(TAG, "BOTTOM SCROLL");
-
-
-
-                    }
-                }
-            });*/
+            });
         }
 
+    }
+
+    private void configApi() {
+        getSupportLoaderManager().initLoader(0, null, this).forceLoad();
+        //getSupportLoaderManager().initLoader(0, null, (LoaderManager.LoaderCallbacks<String>)this).forceLoad();
     }
 
     @Override
@@ -90,6 +89,7 @@ public class MyApiLoader extends AppCompatActivity implements LoaderManager.Load
 
     @Override
     public void onLoaderReset(Loader<String> loader) {
+        tvJsonResult.setText("");
 
     }
 

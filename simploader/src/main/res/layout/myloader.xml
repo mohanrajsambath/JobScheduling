@@ -3,15 +3,23 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true">
-    <ScrollView
+    <!--<ScrollView
 
         android:id="@+id/scrl_json"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent">-->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scrl_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_bottom"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true">
         <TextView
             android:id="@+id/tv_json_result"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Loading..."/>
-    </ScrollView>
+        </android.support.v4.widget.NestedScrollView>
+   <!-- </ScrollView>-->
 </LinearLayout>
