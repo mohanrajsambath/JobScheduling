@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         wV_odoo=(WebView)findViewById(R.id.wV_odoo);
         wV_odoo.getSettings().setJavaScriptEnabled(true);
         loadUrl(myUrl);
