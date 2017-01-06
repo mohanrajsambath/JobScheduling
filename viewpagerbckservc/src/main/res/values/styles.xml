@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+
+    <style name="AppBaseTheme" parent="MyMaterialTheme.Base">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- To change the popup menu and app text color  -->
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <!-- To change the popup menu background color  -->
+        <item name="android:itemBackground">@color/colorWhite</item>
+    </style>
+
+
+
+    <style name="AppBaseTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <!--<item name="android:textColor">@color/orange</item>-->
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+
+    <style name="AppBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal</item>
+        <item name="android:minHeight">@dimen/_10ssp</item>
+        <item name="android:maxHeight">@dimen/_20ssp</item>
+    </style>
+
+</resources>

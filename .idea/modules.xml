@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/JobServices/JobServices.iml" filepath="$PROJECT_DIR$/JobServices/JobServices.iml" />
       <module fileurl="file://$PROJECT_DIR$/customloader/customloader.iml" filepath="$PROJECT_DIR$/customloader/customloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/simploader/simploader.iml" filepath="$PROJECT_DIR$/simploader/simploader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagerbckservc/viewpagerbckservc.iml" filepath="$PROJECT_DIR$/viewpagerbckservc/viewpagerbckservc.iml" />
     </modules>
   </component>
 </project>

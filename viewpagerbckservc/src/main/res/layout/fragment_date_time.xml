@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_20ssp"
+        android:layout_marginRight="@dimen/_20ssp"
+        android:layout_height="200dp"
+        android:background="#969090"
+        android:layout_centerInParent="true">
+
+
+        <TextView
+            android:text="Date"
+            android:textSize="@dimen/_20ssp"
+            android:padding="@dimen/_5ssp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/txtvw_date"/>
+        <TextView
+            android:text="Time"
+            android:textSize="@dimen/_16ssp"
+            android:padding="@dimen/_5ssp"
+            android:textStyle="italic"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/txtvw_time"/>
+    </LinearLayout>
+    <TextView
+        android:text="Show the Date Time Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" android:layout_marginTop="@dimen/_27ssp"
+        android:id="@+id/textView3"/>
+</RelativeLayout>
