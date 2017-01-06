@@ -1,1 +1,1 @@
-include ':JobServices', ':simploader', ':customloader', ':viewpagerbckservc'
+include ':JobServices', ':simploader', ':customloader', ':viewpagerbckservc', ':audiorecording'
