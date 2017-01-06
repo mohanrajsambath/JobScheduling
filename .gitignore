@@ -62,3 +62,5 @@ pgrsasynloader/src/main/res/drawable/
 simploader/libs/
 simploader/src/main/res/drawable/
 viewpagerbckservc/libs/
+
+.idea/misc.xml
