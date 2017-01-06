@@ -9,8 +9,12 @@
       <module fileurl="file://$PROJECT_DIR$/audiorecording/audiorecording.iml" filepath="$PROJECT_DIR$/audiorecording/audiorecording.iml" />
       <module fileurl="file://$PROJECT_DIR$/customasyncloader/customasyncloader.iml" filepath="$PROJECT_DIR$/customasyncloader/customasyncloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/customloader/customloader.iml" filepath="$PROJECT_DIR$/customloader/customloader.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/customloader/customloader.iml" filepath="$PROJECT_DIR$/customloader/customloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/simploader/simploader.iml" filepath="$PROJECT_DIR$/simploader/simploader.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/explisthashmap/explisthashmap.iml" filepath="$PROJECT_DIR$/explisthashmap/explisthashmap.iml" />
+>>>>>>> master
       <module fileurl="file://$PROJECT_DIR$/simploader/simploader.iml" filepath="$PROJECT_DIR$/simploader/simploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewpagerbckservc/viewpagerbckservc.iml" filepath="$PROJECT_DIR$/viewpagerbckservc/viewpagerbckservc.iml" />
     </modules>

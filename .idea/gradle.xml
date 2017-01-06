@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/JobServices" />
             <option value="$PROJECT_DIR$/audiorecording" />
             <option value="$PROJECT_DIR$/customloader" />
+            <option value="$PROJECT_DIR$/explisthashmap" />
             <option value="$PROJECT_DIR$/simploader" />
             <option value="$PROJECT_DIR$/viewpagerbckservc" />
           </set>
