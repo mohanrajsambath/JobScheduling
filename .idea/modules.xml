@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/explisthashmap/explisthashmap.iml" filepath="$PROJECT_DIR$/explisthashmap/explisthashmap.iml" />
       <module fileurl="file://$PROJECT_DIR$/simploader/simploader.iml" filepath="$PROJECT_DIR$/simploader/simploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewpagerbckservc/viewpagerbckservc.iml" filepath="$PROJECT_DIR$/viewpagerbckservc/viewpagerbckservc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webkit/webkit.iml" filepath="$PROJECT_DIR$/webkit/webkit.iml" />
     </modules>
   </component>
 </project>
