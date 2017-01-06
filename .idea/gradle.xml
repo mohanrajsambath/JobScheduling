@@ -5,6 +5,18 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/JobServices" />
+            <option value="$PROJECT_DIR$/audiorecording" />
+            <option value="$PROJECT_DIR$/customloader" />
+            <option value="$PROJECT_DIR$/simploader" />
+            <option value="$PROJECT_DIR$/viewpagerbckservc" />
+          </set>
+        </option>
+
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
